@@ -7,15 +7,8 @@ export default function Home() {
   return (
     <button
       onClick={async () => {
-        try {
-          const response = await fetch('/api', { method: 'POST' });
-          const data = response.json();
-
-          router.push(data.url);
-        } catch (error) {
-          console.error(error);
-          router.refresh();
-        }
+        await fetch('/api');
+        router.refresh();
       }}
     >
       Fetch /api
