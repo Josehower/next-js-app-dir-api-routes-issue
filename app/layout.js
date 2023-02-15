@@ -1,4 +1,4 @@
-import './globals.css'
+export const metadata = { title: 'Next.js App' };
 
 export default function RootLayout({ children }) {
   return (
@@ -10,5 +10,5 @@ export default function RootLayout({ children }) {
       <head />
       <body>{children}</body>
     </html>
-  )
+  );
 }
